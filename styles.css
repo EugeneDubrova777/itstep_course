@@ -19,7 +19,7 @@ body {
     border: 5px solid red;
 }
 
-p {
+.description {
     color: crimson;
     width: 500px;
 }
