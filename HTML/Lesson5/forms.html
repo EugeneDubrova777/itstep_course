@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <style>
+    label {
+      display: block;
+    }
+    textarea {
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+  <form action="/" method="GET">
+    <div>
+      <label for="fio">Name</label>
+      <input id="fio" type="text" name="fio" placeholder="fio here" required>
+    </div>
+    <div>
+      <label for="">E-mail</label>
+      <input type="email" name="email" required>
+    </div>
+    <div>
+      <label for="">Birthday</label>
+      <input type="date" name="birthday required" required>
+    </div>
+    <div>
+      <label for="">GitHub</label>
+      <input type="url" name="github">
+    </div>
+    <div>
+      <label for="">CV</label>
+      <input type="file" name="cv">
+    </div>
+    <div>
+      <label for="">Gender</label>
+      <input type="radio" name="gender" value="male">mail
+      <input type="radio" name="gender" value="female">femail
+    </div>
+    <div>
+      <label for="">Grade</label>
+      <input type="checkbox" name="grade[]" value="basic">basic
+      <input type="checkbox" name="grade[]" value="middle">middle
+      <input type="checkbox" name="grade[]" value="high">high
+    </div>
+    <div>
+      <label for="">Password</label>
+      <input type="password" name="password" required>
+    </div>
+    <div>
+      <label for="">Color</label>
+      <input type="color">
+    </div>
+    <div>
+      <label for="">About you</label>
+      <textarea name="about" cols="50" rows="10"></textarea>
+    </div>
+    <div>
+      <label for="">Check your rang</label>
+      <select name="rank">
+        <optgroup label="123">
+          <option value="director">director</option>
+          <option value="teacher">teacher</option>
+        </optgroup>
+        <optgroup label="321">
+          <option value="manager">manager</option>
+          <option value="master">master</option>
+        </optgroup>
+      </select>
+    </div>
+    <!-- <input type="submit" value="отправить"> -->
+    <button type="submit">отправить</button>
+  </form>
+</body>
+</html>

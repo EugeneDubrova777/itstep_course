@@ -1,0 +1,10 @@
+div {
+  border: 3px dashed #3cad2d;
+  /* border-style: dotted dashed solid double; */
+  margin: 10px 20px 30px 25px;
+}
+
+span {
+  display: block;
+  padding: 15px;
+}
