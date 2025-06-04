@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  padding: 0;
+  margin: 0;
+}
+.bordered {
+  border: 1px solid #000;
+  height: 50px;
+  margin-bottom: 10px;
+}
+#block {  
+  width: 100vw;
+  /* height: 100vh; */
+  background-image: url('../qwert.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#block2 {  
+  width: 50%;
+  background-color: #ffffff99;
+  margin-top: -30px;
+}
+#block3 {  
+  width: 25%;
+}
+#block4 {  
+  width: 10rem;
+  background-color: #7d87e0;
+}
+.container {
+  margin: 0 auto;
+  width: 1320px;
+  border: 1px solid #ff0000;
+  padding: 15px;
+}
+.container::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.column {
+  padding: 15px;
+  width: 33%;
+  border: 1px solid #7d87e0;
+  display: inline-block;
+  /* float: left; */
+  font-size: 20px;
+}
+
+.column nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.column li {
+  text-decoration: line-through;
+}
+.column a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 0;
+  color: #000;
+  border-bottom: 1px solid #e4ded0;
+  font-size: 0.8em;
+}

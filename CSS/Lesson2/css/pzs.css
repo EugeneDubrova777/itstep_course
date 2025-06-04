@@ -118,3 +118,54 @@
   margin: 10px;
   float: left;
 }
+
+.pz6 {
+  width: 50%;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+.inputs {
+  margin: 5px auto;
+  width: 320px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.inputs input {
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #d3cfcf;
+  display: block;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #1cbc11;
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: none;
+}
+
+.pz7 {
+  width: 50%;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+
+.square {
+  background-color: #ddd;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  color: #333;
+  margin-left: 6px;
+  text-align: center;
+}
+
+.square:hover {
+  background-color: #d10953;
+  color: #fff;
+}
