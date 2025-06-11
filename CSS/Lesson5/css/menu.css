@@ -58,19 +58,14 @@ h1 {
   display: block;
 }
 
-.submenu2 {
+.menu .submenu > li ul {
+  background-color: #333333;
+  width: 100%;
   position: absolute;
-  left: 255px;
-  background-color: black;
+  top: 0;
 }
 
-.submenu2 li {
+.menu .submenu > li:hover ul {
   display: block;
-  margin-top: 15px;
-  padding: 5px;
-  width: 120px;
-}
-
-.works:hover .submenu2 {
-  display: block;
+  left: 100%;
 }
