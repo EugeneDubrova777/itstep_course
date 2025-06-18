@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(5, 50px);
+  margin-left: 5px;
+}
+
+.dashboard div {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d1d1d1;
+}
+
+.dashboard2 {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(5, 50px);
+  margin-left: 5px;
+}
+
+.dashboard2 div {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d1d1d1;
+}
+
+.dashboard div:nth-child(-n+5),
+.dashboard div:nth-child(n+16),
+.dashboard div:nth-child(n+9):nth-child(-n+12) {
+  background-color: darkcyan;
+}
+
+.dashboard2 div:nth-child(4n-3),
+.dashboard2 div:nth-child(4n),
+.dashboard2 div:nth-child(n+2):nth-child(-n+4),
+.dashboard2 div:nth-child(n+10):nth-child(-n+12),
+.dashboard2 div:nth-child(n+18):nth-child(-n+19) {
+  background-color: darkgoldenrod;
+}
+

@@ -1,0 +1,52 @@
+:root {
+  --color-red: #f13535;
+  /* --size: 200px; */
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.container div {
+  border: 1px solid var(--color-red);
+  width: var(--size, 100px);
+  height: var(--size, 100px);
+  /* margin-top: 15px; */
+  border-radius: 50%;
+}
+
+.container div:last-child {
+  --color-red: blue;
+  background-color: var(--color-red);
+}
+
+.container div:first-child {
+  background-color: blueviolet;
+}
+
+.container div:nth-child(3) {
+  background-color: darkcyan;
+}
+
+/* .container div:nth-child(even) {
+  border-radius: 0;
+} */
+
+/* .container div:nth-child(odd) {
+  position: relative;
+  left: 50px;
+} */
+
+.container div:nth-child(2n) {
+  border-radius: 0;
+}
+
+.container div:nth-child(2n-1) {
+  position: relative;
+  left: 50px;
+}
+
+.container div:nth-child(n+3) {
+  display: inline-block;
+}
