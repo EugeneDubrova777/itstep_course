@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Dischargee';
+  src: url('../fonts/DISCHARGE_2.woff');
+}
+
+div {
+  border: 2px solid #e01010;
+  background-color: antiquewhite;
+  width: 920px;
+  padding: 15px;
+  margin: 15px auto;
+}
+
+.first {
+  font-family: 'Noto Sans Old Italic';
+}
+
+.second {
+  font-family: 'Matangi Light';
+}
+
+.third {
+  font-family: 'Dischargee';
+  font-size: 30px;
+}
