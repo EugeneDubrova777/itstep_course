@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Chollistio';
+  src: url('../fonts/Chollistio.ttf');
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.container {
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Chollistio';
+  text-align: center;
+  width: 900px;
+  height: 80%;
+  border-radius: 100px;
+}
+
+.container form {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+img {
+  width: 100px;
+}
+
+input {
+  display: block;
+  padding: 15px;
+  border: 1px solid #242424;
+}
+
+input[type="email"] {
+  margin-bottom: -15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+input[type="password"] {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: -1px;
+}
+
+form div {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background-color: blue;
+  width: 200px;
+  height: 50px;
+  color: aliceblue;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Chollistio';
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0707c8;
+}
+

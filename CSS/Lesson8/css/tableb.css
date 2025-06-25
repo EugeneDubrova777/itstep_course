@@ -1,0 +1,32 @@
+table {
+  width: 50%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px 10px;
+}
+
+th {
+  border-bottom: 1px solid #bbb;
+}
+
+
+td {
+  text-align: center;
+  border-bottom: 1px solid #bbb;
+}
+
+.border td, th {
+  border: 1px solid #bbb;
+}
+
+tbody tr td:first-child {
+  font-weight: 600;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
