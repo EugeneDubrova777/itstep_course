@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Noto Sans';
+  src: url(../fonts/NotoSans-VariableFont_wdth\,wght.ttf);
+}
+
+.wrapper {
+  width: 600px;
+  font-family: 'Noto Sans';
+  margin: 0 auto;
+}
+
+header h2 {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+}
+
+.main-section img {
+  width: 504px;
+  display: block;
+  margin: 0 auto;
+}
+
+.main-section p {
+  font-size: 19px;
+  text-align: center;
+}
+
+button {
+  width: 97px;
+  height: 42px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: white;
+}
