@@ -1,0 +1,28 @@
+#body-page {
+  background-color: #4dbebe;
+}
+
+.normalized {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.border {
+  border: 5px solid #1436a7;
+}
+.padding {
+  padding: 10px;
+}
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-align {
+  text-align: center;
+}
