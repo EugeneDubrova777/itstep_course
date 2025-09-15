@@ -1,0 +1,10 @@
+.no-decoration {
+  text-decoration: none;
+  color: red;
+}
+
+ul {
+  padding: 20px;
+  margin: 10px;
+  list-style: none;
+}

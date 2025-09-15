@@ -1,0 +1,25 @@
+.notification {
+  border: 3px solid #470f47;
+  padding: 15px 25px;
+  background-color: #da9083;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 20px;
+  position: fixed;
+  top: 20px;
+  right: 40px;  
+  box-shadow: 70px 22px 16px 77px #c8c5116b;
+  opacity: 1;
+}
+
+.notification.hide {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.notification.error {
+  background-color: #6fa86f;
+}
