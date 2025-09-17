@@ -12,54 +12,79 @@ let div = document.getElementById('root');
 // }
 
 
-// let data = {
-//   "Рыбы": {
-//     "форель": {},
-//     "лосось": {}
-//   },
+let data = {
+  "Рыбы": {
+    "форель": {},
+    "лосось": {
+      "rrr": {},
+      "ttt": {
+        "OOOOO": {},
+        "pppppp": {}
+      },
+    }
+  },
 
-//   "Деревья": {
-//     "Огромные": {
-//       "секвойя": {},
-//       "дуб": {}
-//     },
-//     "Цветковые": {
-//       "яблоня": {},
-//       "магнолия": {}
-//     }
-//   }
-// };
+  "Деревья": {
+    "Огромные": {
+      "секвойя": {},
+      "дуб": {}
+    },
+    "Цветковые": {
+      "яблоня": {},
+      "магнолия": {}
+    }
+  }
+};
 
-// let ul = document.createElement('ul');
+function newCreateTree(container, data) {
+  let ul = document.createElement('ul');
 
-// function createTree(container, obj) {
-//   for(let key in obj) {
-//     let li = document.createElement('li');
-//     li.innerText = key;
-//     if(obj[key]) {
-//       let ulInner = document.createElement('ul');
-//       for(let key1 in obj[key]) {
-//         let li1 = document.createElement('li');
-//         li1.innerText = key1;
-//         if(obj[key][key1]) {
-//           let ulInner2 = document.createElement('ul');
-//           for(let key2 in obj[key][key1]) {
-//             let li2 = document.createElement('li');
-//             li2.innerText = key2;
-//             ulInner2.append(li2);
-//           }
-//           li1.append(ulInner2);
-//         }
-//         ulInner.append(li1);
-//       }
-//       li.append(ulInner);
-//     }
-//     ul.append(li);
-//   }
-//   container.append(ul);
-// }
+  for(let key in data) {
+    let li = document.createElement('li');
+    li.innerText = key;
 
-// createTree(div, data);
+    if(data[key]) {
+      newCreateTree(li, data[key]); 
+    }
+
+    ul.append(li);
+  }
+
+  container.append(ul);
+}
+
+newCreateTree(div, data);
+
+let ul = document.createElement('ul');
+
+function createTree(container, obj) {
+  for(let key in obj) {
+    let li = document.createElement('li');
+    li.innerText = key;
+    if(obj[key]) {
+      let ulInner = document.createElement('ul');
+      for(let key1 in obj[key]) {
+        let li1 = document.createElement('li');
+        li1.innerText = key1;
+        if(obj[key][key1]) {
+          let ulInner2 = document.createElement('ul');
+          for(let key2 in obj[key][key1]) {
+            let li2 = document.createElement('li');
+            li2.innerText = key2;
+            ulInner2.append(li2);
+          }
+          li1.append(ulInner2);
+        }
+        ulInner.append(li1);
+      }
+      li.append(ulInner);
+    }
+    ul.append(li);
+  }
+  container.append(ul);
+}
+
+createTree(div, data);
 
 
 
