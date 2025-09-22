@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 400px;
+  height: 200px;
+  border: 3px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.wrapper button {
+  width: 150px;
+  height: 50px;
+  background-color: red;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.wrapper button:hover {
+  background-color: #9e9c1d;
+  color: aliceblue;
+}
+
+.animated {
+  animation: butt 1s infinite linear forwards;
+}
+
+@keyframes butt {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }  
+}
