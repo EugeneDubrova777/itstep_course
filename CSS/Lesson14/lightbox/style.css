@@ -1,0 +1,61 @@
+.forest {
+  display: grid;  
+  grid-template-columns: repeat(3, 100px);
+  justify-content: center;
+  gap: 5px;
+}
+
+.forest h1 {
+  grid-area: 1 / 1 / 2 / 4;
+  text-align: center;
+  background-color: green;
+  color: antiquewhite;
+}
+
+.forest a {
+  display: block;
+  width: 100px;
+  width: 100px;
+  position: relative;
+}
+
+.forest a:after {
+  width: 100%;
+  height: 100%;
+  background-color: #ff0000;
+  opacity: 0;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s linear;
+}
+
+.forest a:hover:after {
+  opacity: 0.5;
+}
+
+.forest a img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .forest h1 {
+    grid-area: 1 / 1 / 1 / 3;
+  }
+  .forest {
+    grid-template-columns: repeat(2, 100px);
+  }
+}
+
+@media (max-width: 320px) {
+  .forest h1 {
+    grid-area: 1 / 1 / 1 / 2;
+  }
+  .forest {
+    grid-template-columns: 100px;
+  }
+}
