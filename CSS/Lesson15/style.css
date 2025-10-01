@@ -1,0 +1,31 @@
+.text-underline {
+  text-decoration: underline;
+}
+
+.btn {
+  border: 1px solid #aaa2a2;
+  border-radius: 10px;
+  padding: 8px 50px;
+  cursor: pointer;
+  background: none;
+  color: darkblue;
+}
+
+.btn-error {
+  color: beige;
+  background-color: crimson;
+  border: 1px solid #e611e6;
+}
+
+.d-flex {
+  display: flex;
+  gap: 2px; 
+}
+
+.j-c-center {
+  justify-content: center;
+}
+
+.a-i-center {
+  align-items: center;
+}

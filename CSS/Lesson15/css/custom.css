@@ -1,0 +1,35 @@
+.carousel-item img {
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+body {
+  font-family: 'Sours Sans 3';
+}
+
+@font-face {
+  font-family: 'Sours Sans 3';
+  src: url('../fonts/SourceSans3-VariableFont_wght.ttf');
+}
+
+.header-contacts {
+  gap: 40px;
+}
+
+.header-contacts p {
+  font-size: 14px;
+}
+
+.header-contacts a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.header-contacts div:first-child a {
+  text-decoration: underline;
+}
+
+.header-top {
+  padding: 32px 0;
+  border-bottom: 1px solid #888888;
+}
