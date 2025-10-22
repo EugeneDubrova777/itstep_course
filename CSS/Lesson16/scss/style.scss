@@ -1,0 +1,47 @@
+@import 'vars';
+@import 'normalize';
+@import 'body';
+@import 'mixins';
+
+ul {
+  width: 30%;
+  margin: 0 auto;
+  @include transform(rotate(10deg));
+  li {
+    list-style: none;
+    padding: 20px 10px;
+    a {
+      font-size: 2em;
+      color: $font-color;
+    }
+  }
+  li:nth-child(2) {
+    a {
+      color: #f6d412;
+    }
+  }
+}
+
+%display-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%square-block {
+  width: 200px;
+  height: 140px;
+}
+
+.block {
+  @extend %square-block;
+  background-color: #cc1111;
+  @include transform(rotate(30deg));
+}
+
+.block1 {
+  @extend %square-block;
+  @extend %display-flex-center;
+  background-color: #832222;
+  @include transform(rotate(30deg));
+}
