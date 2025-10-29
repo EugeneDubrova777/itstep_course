@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import '../scss/index.scss';
 import showAlert from './alert'
 
 function component() {
