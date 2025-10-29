@@ -1,6 +1,5 @@
-const _ = require('lodash');
-const $ = require('jquery');
-const alertModule = require('../js/alert');
+import _ from 'lodash';
+import showAlert from './alert'
 
 function component() {
   const element = document.createElement('div');
@@ -11,6 +10,6 @@ function component() {
 }
 
 document.body.appendChild(component());
-alertModule.myFunction('Heelo');
 
-// $('body').css({backgroundColor: '#adc123'});
+// showAlert('hello0');
+

@@ -4,7 +4,6 @@
   "description": "",
   "license": "ISC",
   "author": "Eugene Dubrova",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "build": "npx webpack build",
