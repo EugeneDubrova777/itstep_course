@@ -24,8 +24,8 @@ catalogue.forEach(product => {
                           </div>
                         </div>
                       </div>`;
-  
-  products_list.append(product_html);  
+
+  products_list.append(product_html);
 });
 
 let cart = window.localStorage.getItem('cart');
