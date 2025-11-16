@@ -24,19 +24,24 @@ console.log(result);
 
 function checkWord() {
   let checker = $('.checker');
-  let checkerHtml = `
-                      <input id="text1" type="text" cols="40" rows="3">
-                      <input id="btn1" type="button" value="Check!">`;
+  let checkerHtml = `<form class="form">
+                      <input id="text1" name="text" type="text" cols="40" rows="3">
+                      <button id="btn1" type="submit">Check!</button>
+                    </form>`;
   
-  let btn = $('#btn1');
-  let text = $('#text1');
+  // let btn = $('#btn1');
+  // let text = $('#text1');
   checker.append(checkerHtml);
-  btn.click(() => {
-    console.log(text.value);
+  let formEl = $('.form').submit((event) => {
+    event.preventDefault();
+  
+    const formData = new FormData(formEl);
+    console.log(formData.get('text'));
   });
-}
 
-{/* <input class="btn" type="submit" value="Check!"></input> */}
+
+
+}
 
 checkWord();
 
