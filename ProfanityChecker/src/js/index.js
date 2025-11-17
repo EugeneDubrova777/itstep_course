@@ -24,7 +24,7 @@ console.log(result);
 
 function checkWord() {
   let checker = $('.checker');
-  let checkerHtml = `<form class="form">
+  let checkerHtml = `<form class="form" id="form" name="form">
                       <input id="text1" name="text" type="text" cols="40" rows="3">
                       <button id="btn1" type="submit">Check!</button>
                     </form>`;
@@ -35,7 +35,7 @@ function checkWord() {
   let formEl = $('.form').submit((event) => {
     event.preventDefault();
   
-    const formData = new FormData(formEl);
+    const formData = new FormData(document.forms.form);
     console.log(formData.get('text'));
   });
 
