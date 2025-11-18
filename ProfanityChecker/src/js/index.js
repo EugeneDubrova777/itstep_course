@@ -3,45 +3,58 @@ import '../scss/index.scss';
 
 let message = 'shit';
 
-const res = await fetch('https://vector.profanity.dev', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ message }),
-});
+let conn = new XMLHttpRequest();
+conn.open('POST', 'https://vector.profanity.dev');
+conn.responseType = 'json';
+conn.send();
+conn.onerror = () => {
+  console.log('Fckn Error!');
+}
+conn.onload = function() {
+  if (this.status !== 200) {
+    console.log(`Status ${this.status} error`);
+    return;
+  }  
+  checkWord(this.response);
+}
 
-let result = await res.json();
-console.log(result);
+// const res = await fetch('https://vector.profanity.dev', {
+//   method: 'POST',
+//   headers: { 'Content-Type': 'application/json' },
+//   body: JSON.stringify({ message }),
+// });
 
-// function checkWord() {
-//   let checker = $('.checker');
-//   let checkerHtml = `<div>
-//                         <input type="text" size="60">
-//                         <button>check!</button>
-//                     </div>`;
-  
-//   checker.append(checkerHtml);
-// }
+// let result = await res.json();
+// console.log(result);
 
-function checkWord() {
+function checkWord(message) {
   let checker = $('.checker');
   let checkerHtml = `<form class="form" id="form" name="form">
                       <input id="text1" name="text" type="text" cols="40" rows="3">
                       <button id="btn1" type="submit">Check!</button>
                     </form>`;
   
-  // let btn = $('#btn1');
-  // let text = $('#text1');
   checker.append(checkerHtml);
-  let formEl = $('.form').submit((event) => {
-    event.preventDefault();
   
+  $('.form').submit((event) => {
+    event.preventDefault();
     const formData = new FormData(document.forms.form);
     console.log(formData.get('text'));
+    
+    if(message.isProfanity == true) {
+      let h2 = `<h2>You have bad mouth!</h2>`
+
+      checker.append(h2);
+    }
+
+    if(message.isProfanity == false) {
+      let h2 = `<h2>All is OK!</h2>`
+
+      checker.append(h2);
+    } 
   });
-
-
-
 }
+
 
 checkWord();
 
