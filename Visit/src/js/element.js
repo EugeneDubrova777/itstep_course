@@ -4,7 +4,7 @@ class Element {
     this.id = '';
     this.classes = [];
     this.children = [];
-    this.css = [];
+    this.css = {};
   }
   setId(id) {
     this.id = id;
@@ -24,15 +24,43 @@ class Element {
     }
   }
 
-  render(parent) {
+  addStyles(styles) {
+    Object.assign(this.css, styles);
+  }
+
+  deleteStyles(...styles) {
+    for (let key of styles) {
+      delete this.css[key];
+    }
+  };
+
+  appendChildren(...childs) {
+    for (let c of childs) {
+      this.children.push(c);
+    }
+  }
+
+  createDomElement() {
     const el = document.createElement(this.name);
-    el.id = this.id;
+
+    if (this.id) {
+      el.id = this.id;
+    }
+
     for (let c of this.classes) {
       el.classList.add(c);
     }
-    parent.append(el);
-  }
 
+    for (let key in this.css) {
+      el.style[key] = this.css[key];
+    }
+
+    for (let child of this.children) {
+      el.append(child.createDomElement())
+    }
+
+    return el;
+  }
 }
 
 export default Element;

@@ -1,12 +1,14 @@
 import $ from 'jquery';
 import '../scss/index.scss';
 
-let message = 'shit';
+// let message = 'shit';
 
 let conn = new XMLHttpRequest();
 conn.open('POST', 'https://vector.profanity.dev');
 conn.responseType = 'json';
-conn.send();
+const formData = new FormData();
+formData.append('message', 'shit')
+conn.send(formData);
 conn.onerror = () => {
   console.log('Fckn Error!');
 }
@@ -21,7 +23,7 @@ conn.onload = function() {
 // const res = await fetch('https://vector.profanity.dev', {
 //   method: 'POST',
 //   headers: { 'Content-Type': 'application/json' },
-//   body: JSON.stringify({ message }),
+//   body: JSON.stringify(),
 // });
 
 // let result = await res.json();
