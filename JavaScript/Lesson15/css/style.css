@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+}
+
+.form input, .form button {
+  border-radius: 0;
+  border: 1px solid #582727;
+  height: 35px;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form button {
+  margin-left: -1px;
+  cursor: pointer;
+}
+
+#result {
+  position: fixed;
+  top: 15px;
+  font-size: 60px;
+}
+
+.animated {
+  animation: fadeIn 1s linear both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
