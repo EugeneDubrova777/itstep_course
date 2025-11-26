@@ -1,0 +1,27 @@
+.block {
+  width: 500px;
+  height: 500px;
+  margin: 20px auto;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.spinner {
+  transform-origin: center;
+  animation: spinner 4s infinite linear;
+}
+
+@keyframes spinner {
+  100%{
+    transform: rotate(360deg)
+  }
+}
+
+.text {
+  position: absolute;
+  top: 210px;
+  color: red;
+}

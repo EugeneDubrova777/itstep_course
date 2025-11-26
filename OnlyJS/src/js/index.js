@@ -16,7 +16,7 @@ div.addStyles({
 });
 
 const img = new ImageElement('img');
-img.setSrc('https://www.sciencefriday.com/wp-content/uploads/2018/01/Frankenbrand_1.png');
+img.setSrc('../src/img/frankenstein-masker-deluxe.jpg');
 img.setAlt('avatar');
 
 img.addStyles({
