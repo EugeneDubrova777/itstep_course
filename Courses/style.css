@@ -1,0 +1,31 @@
+html, body {
+  width: 100%;
+  background-color: #f85374;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+.container form {
+  width: 50%;
+  background-color: crimson;
+}
+
+.container div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.container div span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f5f1ed;
+}
