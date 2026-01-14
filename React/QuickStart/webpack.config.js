@@ -58,4 +58,12 @@ module.exports = {
       filename: '[name].[fullhash].css',
     })
   ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    watchFiles: [path.join(__dirname, 'src')],
+    compress: true,
+    port: 9000,
+  },
 };

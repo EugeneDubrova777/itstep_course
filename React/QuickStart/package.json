@@ -6,7 +6,8 @@
   "author": "",
   "scripts": {
     "build": "npx webpack build",
-    "dev": "npx webpack --watch"
+    "dev": "npx webpack --watch",
+    "server": "npx webpack serve"
   },
   "dependencies": {
     "react": "^19.2.3",
@@ -26,6 +27,7 @@
     "sass-loader": "^16.0.6",
     "style-loader": "^4.0.0",
     "webpack": "^5.104.1",
-    "webpack-cli": "^6.0.1"
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
   }
 }

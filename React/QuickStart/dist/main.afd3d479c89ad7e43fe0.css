@@ -6,6 +6,33 @@ html, body {
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body, #app, #app-2 {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+#app-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo {
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 10px rgba(152, 150, 228, 0.8823529412);
+}
+
+.todo h1 {
+  padding: 7px 25px;
+}
+
+.todoHeader {
+  color: #0b4221;
 }
 
 body div {
@@ -22,4 +49,18 @@ h1 {
 
 .btn-danger {
   background-color: crimson;
+  padding: 10px;
+  color: antiquewhite;
+  font-weight: 700;
+  width: 150px;
+  margin: 2px 0;
+}
+
+.btn-pink {
+  background-color: #dc14c1;
+  padding: 10px;
+  color: antiquewhite;
+  font-weight: 700;
+  width: 150px;
+  margin: 2px 0;
 }
