@@ -1,0 +1,104 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss ***!
+  \**************************************************************************************************************/
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #252222;
+}
+
+#wrapper {
+  width: 900px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo {
+  width: 80%;
+  background-color: black;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.todo h1 {
+  color: red;
+  text-align: center;
+}
+
+.todo form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 3px;
+}
+
+.todo form input {
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  color: black;
+}
+
+.todo form button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.button {
+  background-color: brown;
+  color: black;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo form button:hover {
+  background-color: #c82828;
+}
+
+#tasks .task input {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+#tasks .task {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+#tasks .task span {
+  color: red;
+  font-size: 30px;
+}
+
+#tasks .task button {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+#tasks .task button:hover {
+  background-color: #c82828;
+}
+
+.lt-text {
+  text-decoration: line-through;
+}
