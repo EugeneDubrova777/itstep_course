@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-function TextInput({placeholder}) {
+function TextInput({placeholder, id, type}) {
   const [value, setValue] = useState('');
 
   return (
     <>
-    <input id="inp" type="text" value={value} placeholder={placeholder} onChange={(e) => setValue(e.target.value)} />
+    <input id={id} type={type} value={value} placeholder={placeholder} onChange={(e) => setValue(e.target.value)} />
     <p>{value}</p>
     </>
   )

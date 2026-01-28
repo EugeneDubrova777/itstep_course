@@ -7,7 +7,9 @@ function Counter({start}) {
   }
 
   function minus() {
-    setNumber(number - 1);
+    if(number > 0) {
+      setNumber(number - 1);
+    }
   }
 
   return (
