@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #580d0d;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1520px;
+  border: 1px solid #000;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: antiquewhite;
+  color: black;
+  border-radius: 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ecc5b5;
+}
+
+.adding {
+  width: 50%;
+  background-color: #380a0a;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cards-container {
+  width: 50%;
+  background-color: antiquewhite;
+  color: #380a0a;
+}
+
+.no-cards {
+  color: #380a0a;
+  text-transform: uppercase;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #000;
+  background-color: azure;
+  gap: 5px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 3px 0;
+}
+
+.card img {
+  width: 90%;
+  height: 150px;
+}
+
+.card-about {
+  width: 90%;
+  height: 70px;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px;
+}
+
+
+
+
+
+
