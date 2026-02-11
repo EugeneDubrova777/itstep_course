@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'Stack Sans Notch';
+  src: url(../fonts/StackSansNotch-VariableFont_wght.ttf);
+}
+
+* {
+  font-family: 'Stack Sans Notch';
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.game {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.gallows {
+  border: 1px solid #200707;
+  height: 400px;
+  flex-shrink: 0;
+  padding: 30px;
+  position: relative;
+}
+
+.gallows div {
+  display: none;
+}
+
+#kran {
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  width: 250px;
+  height: 100%;
+  position: relative;
+}
+
+#kran::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  border-left: 2px solid black;
+}
+
+#head {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+  right: 184px;
+}
+
+#body {
+  width: 80px;
+  height: 120px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 138px;
+  right: 180px;
+}
+
+#left-leg {
+  height: 70px;
+  border: 2px solid #000;
+  position: absolute;
+  transform: rotate(15deg);
+  top: 250px;
+  right: 245px;
+}
+
+#right-leg {
+  height: 70px;
+  border: 2px solid #000;
+  position: absolute;
+  transform: rotate(-15deg);
+  top: 250px;
+  right: 190px;
+}
+
+#left-hand {
+  height: 50px;
+  border: 2px solid #000;
+  position: absolute;
+  transform: rotate(15deg);
+  top: 190px;
+  right: 263px;
+}
+
+#right-hand {
+  height: 50px;
+  border: 2px solid #000;
+  position: absolute;
+  transform: rotate(-15deg);
+  top: 190px;
+  right: 172px;
+}
+
+.red {
+  background-color: red;
+}
+
+
+
+.word {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 25px 0;
+}
+
+.word-letter {
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 30px;
+  height: 45px;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.letters {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.letter {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.game-over {
+  position: relative;  
+}
+
+.game-over h2 {
+  font-size: 170px;
+  font-weight: 700;
+  position: absolute;
+  top: -84px;
+  left: -478px;
+  display: none;
+}
+
+.game-over h2.active {
+  color: red;
+  display: block;
+}
+
+.game-over h2.active2 {
+  color: blue;
+  display: block;
+}
