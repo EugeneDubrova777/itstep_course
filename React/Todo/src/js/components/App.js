@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import H1 from './headers/H1';
 
 function uid() {
@@ -6,7 +6,8 @@ function uid() {
 }
 
 export default function App() {
-  const [tasks, setTasks] = useState([]);
+  const savedTasks = window.localStorage.getItem("tasks");
+  const [tasks, setTasks] = useState(savedTasks ? JSON.parse(savedTasks) : []);
   const [text, setText] = useState('');
 
   function addNewTask(event) {
@@ -19,34 +20,65 @@ export default function App() {
       {
         id: uid(),
         text: text,
-        status: 0,
+        status: false,
       }
     ];
 
     setTasks(newTasks);
+    setText("");
     console.log(tasks);
   }
+
+  function changeStatus(taskId) {
+    const newTasks = tasks.map(task => {
+      if (task.id == taskId) {
+        task.status = !task.status;
+      }
+
+      return task;
+    });
+
+    setTasks(newTasks);
+  }
+
+  function deleteTask(taskId) {
+    if (confirm("delete this task?")) {
+      const newTasks = tasks.filter(task => {
+        return task.id != taskId;
+      });
+  
+      setTasks(newTasks);
+    }
+    
+  }
+
+  useEffect(() => {
+    window.localStorage.setItem("tasks", JSON.stringify(tasks))
+  }, [tasks]);
 
   return (
     <>
     <H1 headerText="ToDo List" />
     <form action="" onSubmit={addNewTask}>
-      <input type="text" onChange={e => setText(e.target.value)} />
+      <input type="text" value={text} onChange={e => setText(e.target.value)} />
       <button type="submit" className="button">Add</button>
     </form>
-    <ul id="tasks">
+    {
+      tasks.length > 0 ? <ul id="tasks">
       {
         tasks.map(task => {
           return (
-          <li className="task">
-            <input type="checkbox" defaultChecked value="1" />
-            <span className="lt-text">Task 1</span>
-            <button className="button">X</button>
+          <li className="task" key={task.id}>
+            <input type="checkbox" checked={task.status} value="1" onChange={() => {changeStatus(task.id)}} />
+            <span className={task.status ? "lt-text" : null}>{task.text}</span>
+            <button className="button" onClick={() => {deleteTask(task.id)}}>X</button>
           </li>
           )
         })
       }
-    </ul>
+    </ul> : ("No Tasks")
+    }
     </>
+
   )
 }
