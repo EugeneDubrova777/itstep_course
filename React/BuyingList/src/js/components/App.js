@@ -1,22 +1,32 @@
 import {useState, useEffect} from 'react';
 import H1 from './headers/H1';
 
+const START_BALANCE = 0;
+
 function uid() {
   return `${Date.now}_${Math.random().toString(16).slice(2)}`;
 }
 
 export default function App() {
   const savedProducts = window.localStorage.getItem("tasks");
-  const [products, setProducts] = useState(savedProducts ? JSON.parse(savedProducts) : []);
+
+  let summ = savedProducts ? JSON.parse(savedProducts).reduce(function(accum, item, index){
+    return accum += parseFloat(item.amount);
+}, START_BALANCE) : START_BALANCE;
+
+
   const [date, setDate] = useState('');
   const [text, setText] = useState('');
-  const [num, setNum] = useState('');
+  const [num, setNum] = useState(0);
+
+  const [total, setTotal] = useState(summ);
+  const [finances, setFinances] = useState(savedProducts ? JSON.parse(savedProducts) : []);
 
   function addNewProduct(event) {
     event.preventDefault();
 
     const newProducts = [
-      ...products,
+      ...finances,
       {
         id: uid(),
         date: date,
@@ -25,16 +35,22 @@ export default function App() {
       }
     ];
 
-    setProducts(newProducts);
+    setFinances(newProducts);
+
+    let summ = newProducts.reduce(function(accum, item, index){
+        return accum += parseFloat(item.num);
+    }, START_BALANCE);
+
+    setTotal(summ);
+    // setProducts(newProducts);
     setDate("");
     setText("");
-    setNum();
-    console.log(products);
+    setNum(0);
   }
 
   useEffect(() => {
-    window.localStorage.setItem("products", JSON.stringify(products))
-  }, [products]);
+    window.localStorage.setItem("products", JSON.stringify(finances))
+  }, [finances]);
 
   return (
     <>
@@ -45,10 +61,13 @@ export default function App() {
       <input type="number" value={num} onChange={e => setNum(e.target.value)} />
       <button type="submit" className="button">Add</button>
     </form>
+    <div className="total">      
+      <span className="summ">{total}</span>
+    </div>
     {
-      products.length > 0 ? <ul id="tasks">
+      finances.length > 0 ? <ul id="tasks">
       {
-        products.map(product => {
+        finances.map(product => {
           return (
           <li className="task" key={product.id}>            
             <span className="product">{product.date} {product.text} {product.num}</span>
@@ -56,7 +75,7 @@ export default function App() {
           )
         })
       }
-    </ul> : ("No Products")
+    </ul> : <p className="no">No Products</p>
     }
     </>
 
