@@ -136,3 +136,62 @@ let tom: User = new Employee("Tom Soyer", "female");
 let employeeTom: Employee = <Employee>tom;
 employeeTom.company = "amazon";
 
+
+
+
+function getId<T>(id: T): T {     
+  return id;
+}
+
+console.log(getId<number>(55));
+console.log(getId<string>('hello'));
+
+
+
+
+class  Man<T> {
+  private _id: T;
+
+  constructor(id: T) {
+    this._id = id;
+  }
+
+  getId(): T{
+    return this._id;
+  }
+}
+
+let m: Man<number> = new Man<number>(12);
+
+console.log(m.getId());
+
+
+
+
+type Person = {
+  name: string
+}
+
+function compareName<T extends Person>(obj1: T, obj2: T): void{     
+  if(obj1.name === obj2.name) {
+      console.log("Имена совпадают");
+  }
+  else {
+      console.log("Имена различаются");
+  }
+}
+
+let p: Person = {
+  name: "Fred"
+}
+
+let p2: Person = {
+  name: "Pete"
+}
+
+let p3: {age: number} = {
+  age: 44
+}
+
+compareName(p, p2);
+// compareName(p, p3);
